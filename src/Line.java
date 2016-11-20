@@ -5,6 +5,8 @@ import javax.swing.*;
 public class Line{
 
     public static void main(String[] args){
+        /*
+        Animation//
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 JFrame frame = new JFrame();
@@ -14,6 +16,44 @@ public class Line{
                 frame.setVisible(true);
             }
         });
+        */
+
+        /*
+        //MouseListener::::
+        JFrame p = new JFrame();
+        JButton b = new JButton("Click or not Click");
+
+        MouseListener l = new MouseAdapter() {
+            public void mousePressed(MouseEvent e) {
+                JButton b = (JButton)e.getSource();
+                b.setSelected(true);
+                b.setText("omg");
+                b.repaint();
+            }
+            public void mouseReleased(MouseEvent e) {
+                JButton b = (JButton)e.getSource();
+                b.setSelected(false);
+                b.setText("Click or not Click");
+                b.repaint();
+            }
+            public void mouseEntered(MouseEvent e){
+                JButton b = (JButton)e.getSource();
+                b.setText("yo");
+                b.repaint();
+            }
+            @Override
+            public void mouseExited(MouseEvent e){
+                JButton b = (JButton)e.getSource();
+                b.setText("Click or not Click");
+                b.repaint();
+            }
+        };
+        b.addMouseListener(l);
+
+        p.add(b);
+        p.setVisible(true);
+        p.pack();
+        */
     }
 }
 

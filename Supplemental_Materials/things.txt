@@ -1,0 +1,4 @@
+- Painting in java: http://www.oracle.com/technetwork/java/painting-140037.html
+- Simple 2D Animation in a JFrame
+- BFS/DFS: MIT OCW 6.006
+	Yeah, that's pretty much all you need to know for this one. 

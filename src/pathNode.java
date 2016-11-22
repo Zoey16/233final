@@ -12,36 +12,29 @@ public class pathNode extends puzzleNode {
     // private ArrayList<pathNode> adj;
     /* the parent of this path node */
     private pathNode parent;
+    
+    /* the entry and exit of the path line through this path node
+                1 
+            ----|----
+           |    v    |
+      3  --->        <---  4
+           |    ^    |
+            ----|----
+                2
+        entry represents where the path line enters.
+        when a button is clicked, there's an entry line enters from entry 1,2,3,4 to the center of the node
+        after that, when an adjacent button is clicked, the exit line exits from the center to the exit
+        and connect to the entry of the adjacent line
+    */
+    private int entry = -1;
+    private int exit = -1;
+    /* reveals the entry and exit situtation */
+    private boolean hasEntry;
+    private boolean hasExit
 
 
     public pathNode(){
         super();
-        this.addMouseListener(new MouseListener() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-
-            }
-
-            @Override
-            public void mousePressed(MouseEvent e) {
-
-            }
-
-            @Override
-            public void mouseReleased(MouseEvent e) {
-
-            }
-
-            @Override
-            public void mouseEntered(MouseEvent e) {
-
-            }
-
-            @Override
-            public void mouseExited(MouseEvent e) {
-
-            }
-        });
     }
 
     /**
@@ -73,6 +66,38 @@ public class pathNode extends puzzleNode {
     public pathNode getParent(){
         return parent;
     }
+    
+    public int getEntry(){
+		if(hasEntry)
+        	return entry;
+		else
+			return -1;
+	}
+	
+	public int getExit(){
+		if(hasExit)	
+			return exit;
+		else
+			return -1;
+	}
+	
+	public int setEntry(int entry){
+		if(!hasEntry)
+			this.entry = entry;
+		//debug
+		else
+			System.out.println("already has entry");
+	}
+	
+	public int setExit(int exit)
+		if(hasEntry && !hasExit)
+			this.exit = exit;
+		//debug
+		else
+			System.out.println("already has exit");
+	}
+	
+        
 
     /**
      * Get the adjacency list of this path node

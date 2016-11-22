@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class pathNode extends puzzleNode {
 
     /* An adjacency list of this path node */
-    private ArrayList<pathNode> adj;
+    // private ArrayList<pathNode> adj;
     /* the parent of this path node */
     private pathNode parent;
 
@@ -59,7 +59,7 @@ public class pathNode extends puzzleNode {
      * @return true if success, false otherwise
      */
     public boolean setParent(pathNode parent){
-        if(getParent() != null){
+        if(getParent() == null){
             this.parent = parent;
             return true;
         }
@@ -78,19 +78,24 @@ public class pathNode extends puzzleNode {
      * Get the adjacency list of this path node
      * @return the adjacency list of this path node
      */
+    /*
     public ArrayList<pathNode> getAdjacent(){
         return adj;
     }
-
+    */
+    
+    
     /**
      * Add an adjacent path node to the adjacnency list
      * @param p an adjacent path node
      */
+    /*
     public void addAdjacent(pathNode p){
         if(!adj.contains(p)) {
             adj.add(p);
         }
     }
+    */
 
 
 }
